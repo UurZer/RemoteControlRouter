@@ -10,7 +10,7 @@ namespace Rcr.Core.Entity
         }
         [Key]
         public Guid Id { get; set; }
-        public Guid CreatedBy { get; set; }
+        public Guid? CreatedBy { get; set; }
         public Guid ModifiedBy { get; set; }
 
         private DateTime createdDate;

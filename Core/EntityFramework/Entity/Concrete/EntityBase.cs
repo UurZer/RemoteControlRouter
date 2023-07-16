@@ -10,14 +10,14 @@ namespace Rcr.Core.Entity
         }
         [Key]
         public Guid Id { get; set; }
-        public string CreatedBy { get; set; }
-        public string ModifiedBy { get; set; }
+        public Guid CreatedBy { get; set; }
+        public Guid ModifiedBy { get; set; }
 
-        private DateTime? createdDate;
+        private DateTime createdDate;
         [DataType(DataType.DateTime)]
         public DateTime CreatedDate
         {
-            get { return createdDate ?? DateTime.Now; }
+            get { return DateTime.Now; }
             set { createdDate = value; }
         }
 

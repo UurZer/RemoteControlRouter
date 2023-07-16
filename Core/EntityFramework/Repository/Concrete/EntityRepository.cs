@@ -4,7 +4,7 @@ using Rcr.Core.Entity;
 
 namespace Rcr.Core.Repository
 {
-    public class EntityRepository<TEntity, TContext> : IEntityRepository<TEntity>
+    public class EntityRepository<TEntity, TContext> : IEntityRepository<TEntity> 
         where TEntity : class, IEntity, new()
         where TContext : DbContext, new()
     {
@@ -29,11 +29,16 @@ namespace Rcr.Core.Repository
             }
         }
 
-        public TEntity Get(Expression<Func<TEntity, bool>> filter)
+        public TEntity Get(Expression<Func<TEntity, bool>> filter, Expression<Func<TEntity, object>> include = null)
         {
             using (var context = new TContext())
             {
+                if (include is null)
                 return context.Set<TEntity>().SingleOrDefault(filter);
+
+                return filter == null
+                    ? context.Set<TEntity>().Include(include).SingleOrDefault()
+                    : context.Set<TEntity>().Include(include).Where(filter).SingleOrDefault();
             }
         }
 

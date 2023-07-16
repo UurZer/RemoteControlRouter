@@ -1,17 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Data.Entity.ModelConfiguration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Rcr.Data.Entity;
 
 namespace Rcr.Data.DbModelConfiguration
 {
-    public class VehicleDbMapper : EntityTypeConfiguration<Vehicle>
+    internal class VehicleDbMapper : DbEntityConfiguration<Vehicle>
     {
-        public VehicleDbMapper()
+        public override void Configure(EntityTypeBuilder<Vehicle> entity)
         {
-            this.HasKey(x => x.Id);
-            this.Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
+            entity.HasKey(x => x.Id);
+            entity.Property(x => x.Name).HasMaxLength(255).IsRequired();
 
-            this.ToTable("Vehicle", "Rcr");
+            entity.HasOne(x => x.Route);
+
+            entity.ToTable("VEHICLE", "Rcr");
         }
     }
 }

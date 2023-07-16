@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RemoteControleRouter\\RemoteControleRouter\\RemoteControleRouter\\RemoteControlRouter.csproj": {}
+    "D:\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter.csproj": {}
   },
   "projects": {
-    "D:\\RemoteControleRouter\\RemoteControleRouter\\RemoteControleRouter\\RemoteControlRouter.csproj": {
+    "D:\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RemoteControleRouter\\RemoteControleRouter\\RemoteControleRouter\\RemoteControlRouter.csproj",
+        "projectUniqueName": "D:\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter.csproj",
         "projectName": "RemoteControlRouter",
-        "projectPath": "D:\\RemoteControleRouter\\RemoteControleRouter\\RemoteControleRouter\\RemoteControlRouter.csproj",
+        "projectPath": "D:\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter.csproj",
         "packagesPath": "C:\\Users\\o\\.nuget\\packages\\",
-        "outputPath": "D:\\RemoteControleRouter\\RemoteControleRouter\\RemoteControleRouter\\obj\\",
+        "outputPath": "D:\\RemoteControlRouter\\RemoteControlRouter\\RemoteControlRouter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -50,7 +50,15 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[5.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.8, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

@@ -6,13 +6,12 @@ namespace Rcr.Data.Entity
     {
         public string Name { get; set; }
 
-        public string Direction { get; set; }
+        public bool Status { get; set; }
 
-        public int RouteX { get; set; }
-
-        public int RouteY { get; set; }
-
-        public string Status { get; set; }
-
+        #region [ Navigation Properties ]
+        
+        public VehicleRoute Route { get; set; }
+        
+        #endregion
     }
 }
